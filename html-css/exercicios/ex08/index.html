@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listas</title>
+  <link rel="icon" href="../ex06/ratinho.ico" type="image/x-icon">
+  </head>
+  <body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2>
+    <p>
+      Existe listas de:
+    </p>
+    <ol type="1">
+      <li> Listas numericas (&lt;ol type="1"&gt;(padrao) + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ol>
+    <ol type="a">
+      <li> Com letras minusculas(&lt;ol type="a"&gt; + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ol>
+    <ol type="A">
+      <li> Com letras maiusculas(&lt;ol type="A"&gt; + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ol>
+    <ol type="i">
+      <li> Com algarismos romanos minusculos(&lt;ol type="i"&gt; + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ol>
+    <ol type="I">
+      <li> Com algarismos romanos maiusculos (&lt;ol type="I"&gt; + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ol>
+    <p>
+      Podendo usar tambem o parametro &lt;ol start="N&deg;inicial", exemplo:
+    </p>
+    <ol start="3">
+      <li>Essa</li>
+      <li>Lista</li>
+      <li>Comecou</li>
+      <li>Do</li>
+      <li>3</li>
+      <li>ou seja: &lt;ol start="3"&gt;</li>
+    </ol>
+    <h2>Listas nao ordenadas</h2>
+    <p>
+      Listas que nao precisam ser ordenadas:
+    </p>
+    <ul type="disc">
+      <li> Com bolinhas(&lt;ul type="disc"&gt;(padrao) + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ul>
+    <ul type="circle">
+      <li> Com bolinhas abertas(&lt;ul type="circle"&gt; + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ul>
+    <ul type="square">
+      <li> E com quadradinhos (&lt;ul type="square"&gt; + &lt;li&gt;).</li>
+      <li> Detesto listas.</li>
+      <li> Detesto HTML.</li>
+      <li> Vida que segue.</li>
+    </ul>
+    <h2>Juntando listas versao 1.0</h2>
+      <h3>Agora vamo aprender a bottar listas dentro de listas nessa bagaceira:</h3>
+    <ol>
+      <li>Lista 1
+        <ol>
+        <li>Sub-lista 1</li>
+        <li>Sub-lista 2</li>
+        <li>Sub-lista 3</li>
+      </ol>
+      </li>
+      <li>Lista 2
+      <ol>
+        <li>Sub-lista 1</li>
+        <li>Sub-lista 2</li>
+        <li>Sub-lista 3</li>
+      </ol>
+      </li>
+      <p><b>Exemplos mais praticos:</b></p>
+    <ol>
+      <li>Coisas que eu odeio
+      <ol>
+        <li>HTML</li>
+        <li>TAGS</li>
+        <li>Listas</li>
+      </ol>
+      </li>
+      <li>Coisas que eu quase nao odeio
+        <ol>
+        <li>Botar imagens</li>
+        <li>Referencias</li>
+        <li>Pamonha</li>
+      </li>
+      </ol>
+    </ol>
+    <h3>Agora bora misturar tipos de listas, listar ordenadas com nao ordenadas (pra que? num sei, mas vamo).</h3>
+    <ol>
+      <li>
+        Coisas que engordam
+      <ol type="a">
+        <li>Bebidas
+        <ul type="circle">
+          <li>Refrigerante</li>
+          <li>Suquinho TANG</li>
+          <li>Suco natural de laranja</li>
+          <li>Leitim com Toddy</li>
+        </ul>
+        </li>
+      </ol>
+        <ol type="a" start="2">
+          <li>Comidas
+          <ul type="square">
+            <li>Basicamente</li>
+            <li>TUDO</li>
+            <li>que</li>
+            <li>voce</li>
+            <li>imaginar</li>
+          </ul>
+          </li>
+        </ol>
+      </li>
+      <li>
+        Coisas que nao engordam
+      <ol type="a">
+        <li>Lista inexistente, basicamente tudo engorda
+          <ul type="disc">
+            <li>Olhar pra comida</li>
+            <li>Cheirar a comida</li>
+            <li>Estar perto da comida</li>
+            <li>Respirar perto da comida</li>
+            <li>VIVER ENGORDA</li>
+          </ul>
+        </li>
+      </ol>
+     </li>
+    </ol>
+    <h2>Agora mais uma lista (Deusolivre): Lista de definicao.</h2>
+    <dl>
+      <dt>Termo (&lt;dl&gt; + &lt;dt&gt;)</dt>
+      <dd>Descricao (&lt;dl&gt; + &lt;dd&gt;)</dd>
+    </dl>
+    <h3>Exemplos</h3>
+    <dl>
+      <dt>HTML</dt>
+      <dd>O que cria o conteudo e marcacoes de um site (a estrutura de uma musica, a partitura, a strofe, o refrao, o climax).</dd>
+      <dt>CSS</dt>
+      <dd>O que estiliza o site, faz o design (e a performance e interpretacao da musica, o que faz ela ser bonita, tocante e inspiradora, sao as dinamicas, as variacoes de ritmo, a estetica, as nuances).</dd>
+      <dt>JavaScript</dt>
+      <dd>E a linguagem de programacao que faz a iteratividade do site, que manda em como ele vai funcionar (e a teoria musical pura, as as regras de contraponto, regras de harmonia, regras de escrita).</dd>
+    </dl>
+  </body>
+</html>
