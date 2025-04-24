@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../ex06/ratinho.ico" type="image/x-icon">
+    <title>Estudo de Links</title>
+  </head>
+  <body>
+    <h1>Usando links externos</h1>
+    <p>
+    Da pra transformar qualquer palavra em um link, por exemplo: <a href="https://pt.wikipedia.org/wiki/Batata">Batata</a> &larr; e um link pra explicacao de batata na Wikipedia.<br> 
+    Pra fazer isso, tem que fazer uma ancora na palavra com a tag "&lt;a&gt;": &lt;a href="URL"&gt;Batata&lt;/a&gt;.<br>
+Isso cria um link que abre a pagina na mesma aba do site atual (nao recomendado).
+    </p>
+    <h2>Link para outra aba</h2>
+    <p>
+    Pra criar um link que abra uma nova aba no navegador, tem que usar a referencia <b>target="_blank"</b>, e se quiser usar uma referencia semantica e SEO, da pra usar: <b>rel="external"</b><br>
+    Exemplo: Vou criar um link pra receita de <a href="https://www.tudogostoso.com.br/receita/9089-sopa-de-batata.html" target="_blank" rel="external">sopa de batata</a>. (&lt;a href="URL" target="_blank" rel="external"&gt;sopa de batata&lt;/a&gt;).
+    </p>
+    <h2>Usando Links internos</h2>
+    <p>
+    Os links internos servem mais pra direcionar para coisas internas do site, pra navegar dentro de arquivos do proprio servidor (da minha bagunca interna no caso).<br><br>
+    Clique <a href="pag002.html">aqui</a> para ver a magica!<br>
+    No caso, basta fazer o href receber o caminho do arquivo pra onde voce quer que o link leve.<br>
+    Exemplo do link la &uparrow;:<br>
+    Clique &lt;a href="pag002.html"&gt;aqui&lt;/a&gt; para ver a magica!
+    <h3>Agora vamo de link labirinto</h3>
+    <p>
+    Vamo criar um arquivo que faz voce percorrer meio mundo de pasta ate chegar na toca do dragao.<br>
+    Va ate ele <a href="../../../../Desktop/toca-do-dragao/entre/bem-vindo/toca.html">&#x1f409;</a><br><br>
+    Caso tenha ficado curioso, o codigo ficou assim:<br>Va ate ele &lt;a href="../../../../Desktop/toca-do-dragao/entre/bem-vindo/toca.html"&gt;&amp;#x1f409;&lt;&semi;/a&gt;
+    </p>
+    <h1>Link para download</h1>
+    <p>
+    Aqui supostamente tem que aprender a criar links para baixar coisas, basta usar o caminho do arquivo que quer baixar com href, e usar o parametro download para baixar, tudo dentro da tag ancora.<br>
+    E tiroteio, <a href="abaixa/neo-bullet.webp" dowload="neo-bullet.webp">ABAIXAR</a><br><br>
+    Nesse caso como era so uma imagem, ele apenas abre no navegador, mas se quiser baixar um arquivo, faz a mesma coisa so que com a pasta:<br>
+    <a href="abaixa.zip" download="abaixa.zip">ABAIXA</a><br>
+    O codigo fica assim:
+&lt;a href="abaixa.zip" download="abaixa.zip"&gt;ABAIXA&lt;/a&gt;
+    </p>
+  </body>
+</html>
