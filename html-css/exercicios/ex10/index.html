@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../ex06/ratinho.ico" type="image/x-icon">
+    <title>Midias</title>
+  </head>
+  <body>
+    <h1>Imagens dinamicas</h1>
+    <p>
+      Aqui e onde a gente tenta fazer as imagens ter a famosa "responsividade", onde ela vai caber na tela do usuario, nao importando em qual dispositivo ou tamanho de tela que ele esteja.<br>
+      Pra isso, precisa criar imagens diferentes com tamanhos diferentes, e "hierarquizar" (que palavra bonita) os tamanhos do maior pro menor ou do menor pro maior. Bora de exemplos:<br><br>
+      (Por falta de criatividade e preguica pura, vamos usar as imagens que criamos copiando do curso do Tavin Guanabara, se tiver achando ruim cria uma voce ai agora e faz do teu jeito).<br>
+    <picture>
+    <source media="(max-width: 700px)" srcset="imgs/foto-p.png" type="image/png">
+    <source media="(max-width: 1000px)" srcset="imgs/foto-m.png" type="image/png">
+    <img src="imgs/foto-g.png" alt="imagem dinamica"><br>
+    </picture>
+    <h1>O que ta rolando por baixo dos panos</h1>
+    De acordo com o tamanho da tela do usuario, vai ser usado uma imagem diferente, sendo que vai da menor pra maior.<br>
+    Usando a tag &lt;picture&gt;, a gente define do menor pro maior (ou do maior pro menor tambem, isso e cagativo), as imagens que vao ser colocadas de acordo com o tamanho da tela em pixels:<br>
+    &lt;picture&gt;<br><br>
+    &lt;source media="(max-width: 700px)" srcset="imgs/foto-p.png" type="image/png"&gt;<br>
+    Com esse codigo, quando a tela tiver no limite menor que 700px, vai aparecer essa imagem:<br>
+    <img src="imgs/foto-p.png" width="100" alt="foto pequena"><br>
+    &lt;source media="(max-width: 1000px)" srcset="imgs/foto-p.png" type="image/png"&gt;<br>
+    E com esse, aparece a imagem filha do meio, se tiver numa tela com menos de 1000px:<br>
+    <img src="imgs/foto-m.png" width="100" alt="foto media"><br>
+    &lt;img src="imgs/foto-g.png" alt="imagem dinamica"&gt;<br>
+    E esse e o codigo que recebe a foto base, que vai estar no site originalmente, nao cumprir os requisitos para as outras aparecerem (menos de 1000px pra media e menos de 700px pra pequena), aparecendo essa imagem:<br>
+    <img src="imgs/foto-g.png" width="100" alt="foto grande"><br>
+    &lt;/picture&gt;
+   </p>
+  </body>
+</html>
