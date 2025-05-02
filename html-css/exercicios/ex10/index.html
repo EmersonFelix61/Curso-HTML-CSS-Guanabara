@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
@@ -7,30 +6,135 @@
     <title>Midias</title>
   </head>
   <body>
+    <section>
     <h1>Imagens dinamicas</h1>
     <p>
       Aqui e onde a gente tenta fazer as imagens ter a famosa "responsividade", onde ela vai caber na tela do usuario, nao importando em qual dispositivo ou tamanho de tela que ele esteja.<br>
       Pra isso, precisa criar imagens diferentes com tamanhos diferentes, e "hierarquizar" (que palavra bonita) os tamanhos do maior pro menor ou do menor pro maior. Bora de exemplos:<br><br>
       (Por falta de criatividade e preguica pura, vamos usar as imagens que criamos copiando do curso do Tavin Guanabara, se tiver achando ruim cria uma voce ai agora e faz do teu jeito).<br>
+    </p>
     <picture>
     <source media="(max-width: 700px)" srcset="imgs/foto-p.png" type="image/png">
     <source media="(max-width: 1000px)" srcset="imgs/foto-m.png" type="image/png">
     <img src="imgs/foto-g.png" alt="imagem dinamica"><br>
     </picture>
-    <h1>O que ta rolando por baixo dos panos</h1>
-    De acordo com o tamanho da tela do usuario, vai ser usado uma imagem diferente, sendo que vai da menor pra maior.<br>
+    <h2>O que ta rolando por baixo dos panos</h2>
+    <p>
+    De acordo com o tamanho da tela do usuario, vai ser usado uma imagem diferente, sendo que vai da menor pra maior, ou seja, o navegador escolhe a primeira source que a media for verdadeira.<br>
     Usando a tag &lt;picture&gt;, a gente define do menor pro maior (ou do maior pro menor tambem, isso e cagativo), as imagens que vao ser colocadas de acordo com o tamanho da tela em pixels:<br>
+    </p>
+    <p>
     &lt;picture&gt;<br><br>
     &lt;source media="(max-width: 700px)" srcset="imgs/foto-p.png" type="image/png"&gt;<br>
     Com esse codigo, quando a tela tiver no limite menor que 700px, vai aparecer essa imagem:<br>
     <img src="imgs/foto-p.png" width="100" alt="foto pequena"><br>
     &lt;source media="(max-width: 1000px)" srcset="imgs/foto-p.png" type="image/png"&gt;<br>
     E com esse, aparece a imagem filha do meio, se tiver numa tela com menos de 1000px:<br>
+    </p>
     <img src="imgs/foto-m.png" width="100" alt="foto media"><br>
-    &lt;img src="imgs/foto-g.png" alt="imagem dinamica"&gt;<br>
+    <p>&lt;img src="imgs/foto-g.png" alt="imagem dinamica"&gt;<br>
     E esse e o codigo que recebe a foto base, que vai estar no site originalmente, nao cumprir os requisitos para as outras aparecerem (menos de 1000px pra media e menos de 700px pra pequena), aparecendo essa imagem:<br>
+    </p>
     <img src="imgs/foto-g.png" width="100" alt="foto grande"><br>
-    &lt;/picture&gt;
-   </p>
+    <p>&lt;/picture&gt;</p>
+    </section>
+    <section>
+    <h1>Audios</h1>
+    <p>
+    Agora bora conversar sobre midias sonoras<br>
+    Sente essa pedrada: <audio src="midias/musica-estudo.mp3" controls autoplay></audio>
+    </p>
+    <h2>Explicacao e codigo:</h2>
+    <p>
+    Codigo dessa bagacera: &lt;audio src="midias/musica-estudo.mp3" controls autoplay&gt;&lt;/audio&gt;<br><br>
+    Acho que tamo num nivel que nem tem muito o que explicar ne (que inteligentao ele... ai ai...)<br>
+    A tag &lt;audio&gt; recebe o src, que e o caminho do arquivo de audio, o controls e o parametro que coloca o controle de audio (o playerzim la), e o paremetro autoplay e pra reproduzir, e essa jossa so funciona se o audio receber o paremetro muted ou se o navegador permitir (motivos de politicas internas, um bla bla bla muito chato).<br>
+    </p>
+    <h2>Outro jeito:</h2>
+    <p>
+    Existe tambem outros formatos de audio, alem do mp3, que o navegador pode ou nao conseguir reproduzir, e com eles vem alguns parametros e uma outra maneira de escrever o codigo pra colocar eles pra tentar reproduzir de forma hierarquica, tentando de cima pra baixo:<br>
+    </p>
+    <p>
+    <audio preload="metadata" autoplay controls loop><br> 
+   <source src="midias/musica-estudo.mp3" type="audio/mpeg"><br>
+      <source src="midias/musica-estudo.mp3" type="audio/ogg"><br>
+      <source src="midias/musica-estudo.mp3" type="audio/wav"><br>
+    </p>
+    <p>
+      (&lt;audio preload="metadata" autoplay controls loop&gt;)<br>
+      O preload e como vai ser carregado o arquivo de audio, tendo as seguintes opcoes:
+    </p>
+      <ul type="square">
+        <li>Auto:</li>
+       Carrega automaticamente todo o conteudo do audio.
+       <li>Metadata:</li>
+       Carrega so algumas informacoes do audio
+        <li>None:</li>
+        So baixa o audio quando clica no player
+      </ul>
+    <p>
+      loop: e pra quando quer deixar uma musica bonitinha de fundo no site. NAO RECOMENDAVEL.<br>
+      &lt;source src="midias/musica-estudo.mp3" type="audio/mpeg"&gt; (mp3)<br>
+      &lt;source src="midias/musica-estudo.mp3" type="audio/ogg"&gt; (ogg)<br>
+      &lt;source src="midias/musica-estudo.mp3" type="audio/wav"&gt; (wave)
+    </p>
+    <p>
+    Colocando dessa forma, o navegador vai testar de cima pra baixo os tres formatos que eu coloquei. quando o navegador nao suporta nenhum dos tipos de arquivo de audio, voce pode deixar uma mensagem se lamentando e deixando um link direto pro audio tambem:<br>
+      Minha mensagem seria assim: "Teu navegador e pobreta e nao quer reproduzir nada nessa bagaca, toma aqui o <a href="midias/musica-estudo.mp3">AUDIO</a> pra voce nao chorar.
+    </p>
+    </audio>
+    </section>
+    <section>
+      <h1>Videos</h1>
+      <h2>Videos com hospedagem local:</h2>
+      <p>
+      Pra colocar videos e tao simples quanto audios, o codigo e quase o mesmo... O problema de videos e que e mais chatinho a questao de formatos e qualidade, eles sao um pouco mais pesados que arquivos de audio, tem que tomar cuidado com isso pra nao sobrecarregar o site, usar ferramentas como handbreak pra formatar os videos. Entao fica assim:<br>
+      <video src="midias/video-teste.mp4" width="600" controls autoplay></video><br>
+     </p>
+     <p>(video tosco so pra testar, nao tem nenhum significado)<br>
+     <small>ou sera que tem??</small></p>
+     <h3>Explicacao do codigo:</h3> 
+     <p>
+     O codigo dessa budega:<br>
+     &lt;video src="midias/video-teste.mp4" width="600"controls autoplay&gt;&lt;/video&gt;<br>
+     (E possivel colocar uma capa que voce quiser no video antes de ele reproduzir tambem, e so colocar o parametro: poster="caminho/da/image/do/poster")<br>
+     Tambem nao tem muito o que explicar, src e o local de onde o video ta, tem que definir um tamnho pra essa bussanha nao pegar a tela inteira com width="tamanho da giromba", controls pro video ter um player e autoplay pra iniciar automaticamente, pode ter os exatos mesmos parametros e sources do arquivo de audio la em cima, nao vou explicar tudo de novo... SE VIRA.
+     </p>
+     <p><br><br>
+     Observacao:<br>
+     Esse jeito ai e uma caquinha, da muito trabalho e pode gerar muito consumo de banda, doendo no bolso do dono do site que vai ter que gastar com hospedagem, entao nao e muito recomendavel fazer, so em casos especificos.
+     </p>
+     <h2>Video com hospedagem externa</h2>
+     <p>
+     Rapais, o YouTobas num e prefeito nao, esse homi e um pai... Ele te entrega de bandeja o codigo pra voce colocar o video que voce quiser dentro do seu site, com tudo prontinho, so basta voce fazer os ajustes que voce quiser e so voce clicar em compartilhar, e tem la a opcao "incorporar":, e pronto meu pacero, so copiar o codigo.<br>
+     Fica assim:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xr3f23iLVcM?si=XTXrLD9rcDORe4IC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </p>
+     <h3>Explicando essa bagacera:</h3>
+     <p>
+     O trambolho de codigo que e isso:<br>
+     &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Xr3f23iLVcM?si=XTXrLD9rcDORe4IC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+     </p>
+     <p>Agora, Deus que me ajude pra tentar explicar isso, mas bora tentar.<br></p>
+     <h4>Explicando as tags:</h4>
+     <ul type="circle">
+       <li>iframe</li>
+       Coloca a janelinha com o video no site, tirando de outro site.
+       <li>Width e height</li>
+       Tu ja sabe, da o tamanho pra janelinha.
+       <li>src="youtube.blablabla/xablau&Tals..."</li>
+       Isso c tambem ja sabe, e a URL de origem do video.
+       <li>Title</li>
+       Bota um texto pra explicar as coisas pras pessoas menos afortunadas de acessibilidade (descricao de conteudo).
+       <li>frameborder="0"</li>
+       Tira a bordinha externa da janela do video
+       <li>referrerpolicy="..."</li>
+       Isso ai ja e papo de politica de privacidade e o escambau, e basicamente o papai YouTobas evitando que voce se lasque.
+       <li>allowfullscreen</li>
+       Isso aqui e pra aparecer o botao pra maximizar o video.
+       <li>allow</li>
+       E basicamente o YouTobas botando o pau na mesa e falando que vai usar os recurso do navegador pra dancar breakdance com o player, dando liberdade pra tocar automaticamente, copiar, colar, dar uns giro de cabeca, etc...
+     </ul>
+    </section>
   </body>
 </html>
