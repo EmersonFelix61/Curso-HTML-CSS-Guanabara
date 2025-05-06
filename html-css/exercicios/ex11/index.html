@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../ex06/ratinho.ico" type="image/x-icon">
+    <title>Styles estilosos</title>
+  </head>
+  <body style="background-color: cyan">
+    <header>
+      <h1>Bora de CSS agora</h1>
+      <p>
+      CSS nada mais e que o pincel de um site, significa "Cascading Style Sheets", brzando fica "Folhas de Estilo em Cascata". E o bagulho que deixa as parada colorida, com um formato dahorinha e deixa tudo emperiquitado.<br>
+      Bora tentar aprender essa bodega.
+      </p>
+    </header>
+    <main>
+      <h2>Estilos Inline</h2>
+      <section>
+       <p>
+       Primeira coisa que a gente tem que saber, e que existem dois jeitos de aplicar CSS, um deles e dentro do proprio html, com um bagulho chamado CSS inline, formatando com tags nas linhas do conteudo. E como se eu tivesse pintando e botando frozinha nos fios e circuitos de uma maquina (ou seja, definindo nas entranhas do HTML, incluindo tags de estilo em trechos especificos daquele conteudo).<br><br>
+       </p>
+       <p>
+       <u>Bora de exemplos...</u><br>
+       Pra trocar a cor de fundo do site, tu vai la em body e taca-lhe um codigo nele, ficando assim: &lt;body style="background-color: cyan;"&gt;<br>
+       Esse codigo deixa o fundo na cor ciano, e tem uma infinidade de cores que da pra escolher, basta saber procurar.
+       </p>
+       <p>
+       Da pra fazer isso em basicamente todas as tags
+       </p>
+       <h2 style="color: brown; font-family: Arial, Helvetica, sans-serif;">Num titulo maroto</h2>
+       <p>
+       Codigo:<br>
+       &lt;h2 style="color: brown; font-family: Arial, Helvetica, sans-serif;"&gt;Num titulo maroto&lt;/h2&gt;<br>
+       <small>(mudei a fonte do titulo pra arial e botei cor de coco, hihi)</small>
+     </p>
+     <p>
+     Um outro CSS maneiro que e bom mencionar, e o que edita o paragrafo, denntro da tag &lt;p&gt; tu pode deixar formatadinho do jeito que tu quer.<br><br>
+     </p>
+     <p><u>Exemplo de cria:</u><br></p>
+     <p style="text-align: justify; color: #f17ea1; font-family: baskerville, serif; font-size: 20px;">
+     Esse paragrafo aqui, tem o estilo que eu defini, tuto bonitinho e bem delicadinho. <br>
+     </p>
+     <p>
+     O codigo dele fica assim: <br>
+     &lt;p style="text-align: justify; color: #f17ea1; font-family: baskerville, serif; font-size: 20px;"&gt;
+     </p>
+     <p>
+     Note que agora usei numeros hexadecimais pra definir a cor, achei mais chique, basta procurar na internet que existe infinitas tabelas mostrando infinitas cores (mesma coisa com a fonte, pesquisa no google que e sucesso).<br>
+     Alem disso, tambem acrescentei uma formatacao de texto, que foi a text-align: justify, que basicamente alinha as colunas, e tambem o tamanho da fonte, com font-size: 20px;. Existem outras formatacoes, basta pesquisar tambem, deixa de de preguica.
+     </p>
+     <p>
+     A treta de fazer CSS inline, e que tem que fazer em todos que voce quiser modificar uma coisa, de um por um, tag por tag, o que pode dar uma leve poluida no HTML. E bom pra quando queremos modificar algo em especifico, mas pessimo se quisermos que determinadas coisas fiquem padronizadas (como deixar todos os titulos da mesma cor, tamanho e fonte por exemplo).
+     </p>
+      </section>
+      <section>
+        <h2>CSS local</h2>
+        <article>
+        <p>
+        (Para efeitos de aprendizado, vou manter toda a explicacao do conteudo de CSS local ainda nessa pagina, mas nao sera modificado nada no navegador da pagina atual, se quiser ver os efeitos coloridenhos e as frufruzeiras, vai ter que ir pra essa pagina aqui: <a href="frufruzeira.html" rel="external" target="_blank">frufruzera</a>)
+        </p>
+        </article>
+        <p>
+        Sabemos que a estrutura de um HTML e assim:
+        <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="pt-br"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="icon" href="../ex06/ratinho.ico" type="image/x-icon"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code></pre>
+        </p>
+        <p>
+        Entao, pra fazer uma CSS interna, e so botar a tag &lt;style&gt; como parte dessa estrutura, dentro de style tu faz a festa e modifica o que tu quiser, e o que tu modificar vai ter a mesma modificacao pra pagina inteira QUE NEM MAGICA MEU PACERO.
+        </p>
+        <p>
+        Entao fica assim:
+        <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="pt-br"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="icon" href="../ex06/ratinho.ico" type="image/x-icon"&gt;
+            &lt;title&gt;CSS Internas&lt;/title&gt;
+            &lt;style&gt;
+             body{
+              font-family: baskerville, serif;
+              font-size: 22px;
+              background-color: #7cfc00;
+           }
+            h1{
+              color: brown;
+              background-color: #111;
+           }
+            h2{
+              color: yellow;
+            }
+            p{
+              text-align: justify;
+              color: magenta;
+            }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code></pre>
+        </p>
+        <p>(ir para a pagina <a rel="external" href="frufruzeira.html" target="_blank">frufruzeira</a> pra ver os efeitos graficos, ja vou avisando que ta horroroso, mas e apenas para questoes de estudo)</p>
+      </section>
+    </main>
+  </body>
+</html>
