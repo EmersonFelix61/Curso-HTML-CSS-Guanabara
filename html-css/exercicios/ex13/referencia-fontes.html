@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referência Rápida - Fontes</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .exemplo {
+      margin-bottom: 1rem;
+    }
+    .box {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      margin-top: 0.3rem;
+      display: inline-block;
+    }
+  </style>
+
+  <!-- Google Fonts: Roboto e Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1>Referência Rápida - Fontes em CSS</h1>
+
+  <section class="exemplo">
+    <strong>Web-safe padrão:</strong>
+    <div class="box" style="font-family: Arial, Helvetica, sans-serif;">
+      Arial, Helvetica, sans-serif
+    </div>
+    <code>font-family: Arial, Helvetica, sans-serif;</code>
+  </section>
+
+  <section class="exemplo">
+    <strong>Fonte com Google Fonts:</strong>
+    <div class="box" style="font-family: 'Roboto', sans-serif;">
+      Roboto (Google Fonts)
+    </div>
+    <code>font-family: 'Roboto', sans-serif;</code><br>
+    <code>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</code>
+  </section>
+
+  <section class="exemplo">
+    <strong>Fonte Serifada chique:</strong>
+    <div class="box" style="font-family: 'Playfair Display', serif;">
+      Playfair Display (Google Fonts)
+    </div>
+    <code>font-family: 'Playfair Display', serif;</code>
+  </section>
+
+  <section class="exemplo">
+    <strong>Monoespaçada (bom pra código):</strong>
+    <div class="box" style="font-family: 'Courier New', Courier, monospace;">
+      Courier New (monospace)
+    </div>
+    <code>font-family: 'Courier New', Courier, monospace;</code>
+  </section>
+
+  <section class="exemplo">
+    <strong>Tamanhos comuns:</strong>
+    <ul>
+      <li><code>font-size: 16px;</code> → tamanho fixo</li>
+      <li><code>font-size: 1em;</code> → relativo ao pai</li>
+      <li><code>font-size: 1rem;</code> → relativo ao <code>html</code></li>
+    </ul>
+  </section>
+
+</body>
+</html>

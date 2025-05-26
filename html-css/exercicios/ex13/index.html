@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia e Fontes</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="icons/favicon-16x16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+      @font-face{
+        font-family: 'bubble';
+        src: url('fontes/Chewy Bubble.otf')
+      }
+      .playwrite{
+        font-family: "Playwrite HU", cursive;
+      }
+      li{
+        color: #b50000;
+      }
+      dl{
+        margin-left: 1rem;  
+      }
+      dd{
+        margin-left: 0.02rem;
+      }
+      dt{
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>Fontes Marotas</h1>
+      <p>
+      Rapais, entramos em um topico delicado... Fontes tem toda uma teoria EXTREMAMENTE CHATA por tras e que sinceramente, nao tenho certeza do nivel de necessidade de saber isso. Entao vou deixar a encargo da tua consciencia ir atras dessa teoria (pesquisa rapida no gulugulu e suficiente). Aqui eu vou so te mostrar algumas fontes e como aplicar.
+      </p>
+    </header>
+    <section>
+      <p>
+      Obviamente, as fontes sao aplicadas junto com as CSS entao pode ser colocada in-line, na estrutura ou em um arquivo .css separado. A fonte padrao, que e usada se voce nao definir nenhuma fonte, normalmente e a Times New Roman, usada pela maioria dos navegadores tambem, uma coisa basica que tu precisa saber e que existe fontes serifadas, sem serifa e mono espacadas.<br>
+      Serifada e com as perininha empiriquitada e sens-serif e com as perninha reta e mono espacadas é quando todas as letras tem o mesmo espaço entre elas. Aqui vou botar alguns exemplos in-line pra mostrar fontes diferentes.
+      </p>
+    </section>
+    <section>
+        <h2><u>Exemplos Marotos:</u></h2>
+      <ul>
+        <li style="font-family: Arial, sans-serif">
+        Arial, Sans-serif<br>
+        Codigo:<br>
+        <code>&lt;li style="font-family: Arial, sans-serif"&gt;Arial, Sans-serif&lt;/li&gt;</code>
+        </li>
+        <li style="font-family: 'Courier New'">
+        Courier New<br>
+        Codigo: <br>
+        <code>&lt;li style="font-family: 'Courier New'"&gt;Courier New&lt;/li&gt;</code> (teve que colocar 'aspas simples' porque a fonte tem duas palavras separadas por espaco, mo frescuragi).
+        </li>
+        <li style="font-family: Roboto, sans-serif">
+        Roboto<br>
+        Codigo: <br>
+        <code>&lt;li style="font-family: Roboto, sans-serif"&gt;Roboto&lt;/li&gt;</code>
+        </li>
+        <li style="font-family: Papyrus">
+        Papyrus<br>
+        Codigo: <br>
+        <code>&lt;li style="font-family: Papyrus"&gt;Papyrus&lt;/li&gt;</code>
+        </li>
+        <li style="font-family: 'Brush Script MT'">
+        Brush Script MT<br>
+        Codigo: <br>
+        <code>&lt;li style="font-family: 'Brush Script MT'"&gt;Brush Script MT&lt;/li&gt;</code>
+        </li>
+      </ul>
+      <p>
+      Obviamente, alguns desses exemplos sao padroes e outros meio absurdos que quase nunca serao usados ou aceito por alguns navegadores e sistemas operacionais, tipo a Brush Script MT, a Papyrus, roboto, essas tranqueira não são Web-safe, provavelmente nem vão funcionar se não estiverem pré instaladas... 
+      </p>
+    </section>
+    <section>
+      <h2>Web-Safe Fonts</h2>
+      <p>
+      Da pra colocar fontes pré definidas e deixar o navegador escolher qual se adápta mais ao sistema e navegador (pesquisar web-safe fonts no gulugulu).
+      </p>
+      <h3><u>Exemplo:</u></h3>
+      <p>
+      Se eu colocar o código na estrutura do css assim:<br>
+      <code><pre>
+      &lt;style&gt;
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      &lt;/style&gt;
+      </pre></code>
+      O navegador vai procurar por ordem qual fonte vai estar disponível, primeiro ele tenta a Arial, se não tiver no navegador ele passa pra Helvetica, se nenhuma das duas tiver, ele passa pra alguma fonte genérica sans-serif, que basicamente é alguma fonte qualquer que ele achar pelo caminho que seja sem serifa (safado).
+      </p>
+    </section>
+    <section>
+    <h2>Tamanho da fonte (lá ele)</h2>
+    <p>
+    Rapais, oto negócio complicado é esse trem de tamanho das fontes, também tem toda uma teoria por trás e jeitos certos e errados de usar, se tu quiser se aprofundar nisso vai fundo e pesquisa, meu foco aqui num é esse não, vai pesquisar essa breguela por você...<br>
+    </p>
+    <h3>O tal do resumo</h3>
+    Existe dois tipos de tamanhos:
+    <ul>
+      <li>Medidas Absolutas</li>
+      <dl>
+      <dd style="font-size: 1cm;">cm</dd>
+      <dt>Centímetros</dt>
+      <dd style="font-size: 1mm;">mm</dd>
+      <dt>Milímetros (quase não da pra ver, mas ali ta escrito "mm" representado por letras do tamanho de 1mm)</dt>
+      <dd style="font-size: 1in;">in</dd>
+      <dt>A tal da polegada (também representada por 1in)</dt>
+      <dd style="font-size: 1px;">px</dd>
+      <dt>Píxel (nem da pra ver porque ta representado por 1px, que de fato é muito pequeno)</dt>
+      <dd style="font-size: 1pt;">pt</dd>
+      <dt>Ponto (tipografia, mais usado em papel, não recomendável usar, também tá representado por 1pt)</dt>
+      <dd style="font-size: 1pc;">pc</dd>
+      <dt>Paica (mesma peculiaridade do ponto, não recomendável usar para imprimir em telas também representado por 1pc)</dt>
+      </dl>
+      <li>Medidas Relativas</li>
+      <dl>
+        <dd style="font-size: 1em;">em</dd>
+        <dt>Relativo a altura M atual da fonte</dt>
+        <dd style="font-size: 1ex;">ex</dd>
+        <dt>Relativo a altura X atual da fonte</dt>
+        <dd style="font-size: 1rem;">rem</dd>
+        <dt>Relativo a altura do font-size (configurada no html)</dt>
+        <dd style="font-size: 1vw;">vw</dd>
+        <dt>Viewport, relativo ao tamanho da tela proporcionalmente em porcentagem</dt>
+        <dd style="font-size: 1vh;">vh</dd>
+        <dt>Altura da viewport</dt>
+            <dd>%</dd>
+            <dt>Porcentagem?? (dããn?)</dt>
+      </dl>
+    </ul>
+    </section>
+    <article>
+    <p>
+    A recomendação geral é que se use as medidas px e em, sendo que 1em = 16px.
+    </p>
+    </article>
+    <section>
+      <h2>Fontes externas</h2>
+      <p>
+      Existe uma breguelinha chamada Google Fonts um repositório gratuito de fontes, nele você tem acesso à várias fontes gratuitas a hora que você quiser, basta linkar... Vamo aprender a fazer isso.<br><br>
+      </p>
+      <p>
+      Primeiro, você vai no site do <a href="https://fonts.google.com/" target="_blank" rel="external">gulugulu fonts</a>, escolhe a fonte que você achar bonitinha a partir disso tem alguns jeitos de fazer funcionar, uma delas é: clica em obter fonte &lt; obter código de incorporação &lt; , copia o código e cola no head do html, dai é só botar um: <code><pre>body{
+      font-family: "fonte que vossa esquisitice escolher", cursiva? Serifada? Sem serifa? Escolha;
+      }</pre></code>.
+        Esse é basicamente o jeito de deixar o layout do site todo com a mesma fonte. Se quiser deixar só alguma coisa especifica com tal fonte, daí o buraco é mais embaixo... Mas o começo é basicamente o mesmo, só que na hora de passar pro style é um pouco diferente.<br>
+        Tu faz assim:<br>
+        Tu cria uma tal de classe no style e depois taca essa classe na tag de texto que você quer.<br>
+        Tacarei-lhe exemplo de código:
+      </p>
+      <h3 class="playwrite">ESSE AQUI É UM EXEMPLO DE &lt;h3&gt; COM FONTE AFRESCURADA QUE PEGUEI LÁ NO GOOGLE FONTES</h3><br>
+      <p>O código lá de cima:</p>
+      <code><pre>
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet"&gt;
+    &lt;style&gt;
+      .playwrite{
+        font-family: "Playwrite HU", cursive;
+     } 
+    &lt;/style&gt;
+    </pre></code>
+    <p>
+    Depois, pra chamar o h3 com a fonte:
+      &lt;h3 class="playwrite"&gt;ESSE AQUI É UM EXEMPLO DE &lt;h3&gt; COM FONTE AFRESCURADA QUE PEGUEI LÁ NO GOOGLE FONTES&lt;/h3&gt;
+    </p>
+    </section>
+    <section>
+      <h2>Tal do font-face</h2>
+      <p>
+      Agora pra finalizar esse papo de fonte (grazadeus), vamo falar de uma maneira de tacar fontes mirabolantes que não tem no google fontes.<br>
+      Basicamente, tu vai ter que procurar algum site que tenha fontes diferenciadas, tipo o <a href="https://www.dafont.com/pt/" rel="external" target="_blank">DaFont</a> ou o <a href="https://www.fontsquirrel.com/" rel="external" target="_blank">FontSquirrel</a> (existe uma caralhada desses, é só pesquisar), e baixar o arquivo da fonte e taca-lhe no CSS.
+      </p>
+      <h4><u>Tal do exemplo:</u></h4>
+      <div style="font-family: bubble;">SE LIGA NESSA FONTE QUE PITORESCA</div> 
+      <p>
+      Pra fazer isso, basta tu chamar o arquivo que tu baixou do site no CSS com <code>@font-face</code> e depois chamar ela no lugar que você quer.<br>
+      O código:
+      </p>
+      <code><pre>
+      &lt;style&gt;
+        @font-face{
+          font-family: 'bubble';
+          src: url('fontes/Chewy Bubble.otf')
+        }
+      &lt;/style&gt;
+      </pre></code>
+      <footer>
+      Um pequeno detalhe pra tu ficar esperto, é que o nome do font-family é você que define, botei bubble, mas você podia botar bolha, fonte gorda, JORGE... Você quem decide.
+      </footer>
+      <p>
+      Depois, é só tacar onde você quiser, no caso do exemplo ficou assim o código:
+      </p>
+      <code><pre>
+      &lt;div style="font-family: bubble;"&gt;SE LIGA NESSA FONTE QUE PITORESCA&lt;/div&gt; 
+      </code></pre>
+    </section>
+  </body>
+</html>

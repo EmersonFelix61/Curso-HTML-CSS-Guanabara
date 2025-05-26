@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs-icons/icons8-color-mode.gif" type="image/x-icon">
+    <title>Gradiente e Degrade</title>
+    <style>
+    body{
+      background-image: linear-gradient(to top, #3000F0, #001DF0, #6064F0);
+      background-attachment: fixed;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>
+      Aqui nao tem muito o que explicar, pra fazer o degrade em um background, e so usar o parametro <code>background-image: linear-gradient(lado que inicia, cor1, cor2, cor3);</code>. Da pra fixar o background com o parametro <code>background-attachment: fixed;</code>, que tambem tem os parametros scroll(padrao), que o fundo sobe e desce junto com o conteudo da pagina e local, que o fundo roda junto com coisas especificas.<br>
+      </p>
+    </header>
+    <section>
+    <h1 style="background-image: linear-gradient(to left, #78F5D7, #49E1F5, #78F5B0);">Sente so esse exemplo</h1>
+    <p>
+    Aqui eu usei o seguinte codigo: <code>&lt;h1 style="background-image: linear-gradient(to left, #78F5D7, #49E1F5, #78F5B0);"&gt;</code>Sente so esse exemplo&lt;/h1&gt;<br><br>
+    Se liga que aqui eu usei o parametro linear-gradient, comecando da esquerda e com umas corzinha marota pro lado do ciano, ta tudo em hexadecimal porque eu gosto da complexidade que isso aparenta ter. E eu posso usar outros tipos, vai vendo...<br>
+    </p>
+    </section>
+    <section>
+    <h1 style="background-image: radial-gradient(circle, #F555F5, #F56B62);">Oto exemplo (bem patricinho esse)</h1>
+    <p>
+    Aqui eu fiz esse codigo: <code>&lt;h1 style="background-image: radial-gradient(circle, #F555F5, #F56B62);"&gt;Oto exemplo (bem patricinho esse)&lt;/h1&gt;</code><br><br>
+    Nesse exemplo eu usei o grandiente do tipo radial-gradient com a orientacao em circulo, com umas cores bem duvidosas, e descobri que nao uso codigo hexadecimal por achar maneiro ou porque parece complexo, na verdade e porque quando vou procurar cores na internet a maioria me da codigo hexadecimal de cara (sou preguicoso sim, me julgue).
+    </p>
+    </section>
+    <section>
+      <h1 style="background-image: conic-gradient(from 45deg, red, orange, brown);">Ultimo exemplo</h1>
+      Codigo dessa bagacera: <code>&lt;h1 style="background-image: conic-gradient(from 45deg, red, orange, brown);"&gt;Ultimo exemplo&lt;/h1&gt;</code><br><br>
+      <p>
+      Nessa jossa eu usei o conic-gradient, com a orientacao 45deg que e basicamente o angulo onde comeca (da pra usar o deg no linear tambem, definindo 45deg, 90deg, 180deg... essas breguela ai).
+      </p>
+    </section>
+    <article>
+      Vou deixar tambem um gradient maroto de fundo so pra visualizar melhor algum deles, o codigo ficou assim:<br>
+      <code><pre>
+      &lt;style&gt;
+        body{
+          background-image: linear-gradient(to top, #3000F0, #001DF0, #6064F0);
+          background-attachment: fixed;
+        }
+      &lt;/style&gt;
+      </pre></code>
+    </article>
+    <footer>
+      <p>
+      Nao da pra ver muito bem visualmente os efeitos de cada um nos titulos e eu to com preguica de elaborar alguma coisa mais visual, entao vou deixar sua imaginacao visualizar o que rolou ai (eu so dormi 3 horas essa noite, me deixa).
+      </p>
+    </footer>
+  </body>
+</html>

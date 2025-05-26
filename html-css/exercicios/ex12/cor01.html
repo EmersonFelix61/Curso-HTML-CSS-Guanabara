@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs-icons/icons8-color-mode.gif" type="image/x-icon">
+    <title>Cores e CSS</title>
+    <style>
+      body{
+        background-image: url('imgs-icons/88628.jpg');
+        background-repeat: repeat;
+        background-size: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cores e suas nuances</h1>
+      <p>
+      Aqui a gente vai aprender um pouco sobre os jeitos de mexer com as cores com CSS. Tem toda uma teoria por tras das cores e ate um bagulho chamado de psicologia das cores, puta papo chato do caramba, cada cor transmite sentimentos e bla bla bla... Vai procurar uns artigo pra ler na internet, vou explicar isso aqui nao.<br>
+      Tem tambem uma porrada de ferramentas na internet que ajuda com paletas de cores que ajudam na "harmonizacao" de cores.<br>
+      Sites como:<br>
+      </p>
+      <ul type="square">
+        <li>
+          Extensao do Google Crhome chamada ColorZilla (serve para capturar cores e dar o codigo de paginas)
+        </li>
+        <li>
+          <a rel="external" href="https://coolors.co/fcdebe-1e152a-4e6766-5ab1bb-ff101f" target="_blank">coolors.co</a> (gera paleta de cores automaticas)
+        </li>
+        <li>
+          <a rel="external" href="https://colorhunt.co/"target="_blank">colorhunt.co</a> (paletas ja criadas por designers)
+        </li>
+        <li>
+          <a rel="external" href="https://color.adobe.com/pt/" target="_blank">Adobe Color</a> (gera harmonia de cores com base numa cor que tu escolheu)
+        </li>
+        <li>
+          <a rel="external" href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton</a> (Cria harmonizacao de cores e te da exemplos de como ficaria site e outras coisas com aquela paleta de cores)
+        </li>
+        <li>
+        <a rel="external" href="https://www.canva.com/colors/color-meanings/" target="_blank">Canva Color Psychology</a> (aprofunda mais no significado e sentimento de cada cor).
+        </li>
+      </ul>
+    </header>
+    <h2> Como definir as cores</h2>
+    <p>
+    Basicamente, existem quatro maneiras de definir as cores:
+    </p>
+    <section>
+      <h3>Por nome</h3>
+      <p>
+      A primeira e a mais simples e mais limitada, que e escrevendo o nome da cor (sim, simples e primitivo desse jeito).
+      </p>
+      <strong><u>Exemplo maroto:</u></strong>
+      <h4 style="color: purple;">ROXO</h4>
+      <p>
+      O codigo fica assim: &lt;h4 style="color: purple;"&gt;ROXO&lt;/h4&gt;
+      </p>
+      <h4 style="color: yellow">AMARELO</h4>
+      <p>
+      O codigo fica assim: &lt;h4 style="color: yellow;"&gt;AMARELO&lt;/h4
+      &gt;<br>
+      <small>(tosco e limitante)</small>
+      </p>
+    </section>
+    <section>
+      <h3>Por hexadecimais</h3>
+      <p>
+      Depois temos a definicao de cores por codigos hexadecimais, que e muito mais interessante, porque pode percorrer basicamente todas as camadas de cores que cada cor tem.
+      </p>
+      <article>
+        <small>
+          (Explicacao rapida sobre como funciona codigos hexadecimais com cores!<br>
+        O codigo hexadecimal vai de 0 a 9 e da letra A a F, tendo 6 caracteres e comeca com uma # como parte da sintaxe, podendo misturar as letras e numeros.<br>
+        O codigo hexadecimal e baseado no modelo RGB, e a estrutura dele funciona assim:<br>
+        Os dois primeiros digitos representam a intensidade de vermelho, os proximos dois numeros representam a intensidade de verde, e os proximos dois representam a intensidade de azul (#RRGGBB).<br>
+        Essa intensidade de cada uma dessas tres cores vai de 0 a 255, sendo que quanto menor for esse numero, menos presenca dessa cor, e quanto maior o numero, maior a presenca dela).
+        </small>
+      </article>
+      <strong><u>Exemplo maroto:</u></strong>
+      <h4 style="color: #f3f0c6;">Cor pastel</h4>
+      <p>
+      O codigo fica assim: &lt;h4 style="color: #f3f0c6;"&gt;Cor pastel&lt;/h4&gt;
+      </p>
+      <h4 style="color: #1a2b3c">COR???</h4>
+      <p>
+      Botei um codigo hexadecimal qualquer pra ver se saia alguma coisa, e saiu essa cor ai... o codigo:  &lt;h4 style="color: #1a2b3c;"&gt;COR???l&lt;/h4&gt;
+      </p>
+    </section>
+    <section>
+      <h3>Por escala RGB</h3>
+      <p>
+      Pra definir por escala RGB e um pouco parecido com definir por codigo hexadecimal, mas inves de misturar os numeros e letras pra buscar a intensidade de cada um, tu define a intensidade de cada uma das tres cores bases diretamente.
+      </p>
+      <strong><u>Exemplo maroto:</u></strong>
+      <h4 style="color: rgb(255, 0, 0);">RED no talo</h4>
+      <p>
+      O codigo: &lt;h4 style="color: rgb(255, 0, 0);"&gt;RED no talo&lt;/h4&gt;
+      </p>
+      <h4 style="color: rgb(0, 255, 0);">GREEN no talo</h4>
+      <p>
+      O codigo: &lt;h4 style="color: rgb(0, 255, 0);"&gt;GREEN no talo&lt;/h4&gt;
+      </p>
+      <h4 style="color: rgb(0, 0, 255)">BLUE no talo</h4>
+      <p>
+      O codigo: &lt;h4 style="color: rgb(0, 0, 255);"&gt;RED no talo&lt;/h4&gt;
+      </p>
+    </section>
+    <section>
+      <h3>Por caracteristicas de cores</h3>
+      <p>
+      Por ultimo, tem como definir a cor por caracteristicas, dando mais propriedades para as cores, usando a escala <abbr title="Hue(tom), Saturation(saturacao), Lightness(luminosidade)">HSL</abbr>
+      </p>
+      <article>
+        <small>
+          <p>
+          (Explicacao rapida de como funciona o hsl:<br><br>
+          HUE e a cor base que voce escolhe, com base na tabela de cores 360:
+          </p>
+          <pre>
+Graus	Cor
+0	Vermelho
+60	Amarelo
+120	Verde
+180	Ciano
+240	Azul
+300	Magenta
+360	Volta pro vermelho
+          </pre>
+          <p>
+          Saturacao varia de 0% a 100%, sendo que zero deixa a cor opaca, cinza, sem vida, e 100 deixa a cor viva, forte e vibrante.<br><br>
+          Lightness tambem vai de 0% a 100%, sendo que 0% deixa a cor mais escura e 100% deixa a cor praticamente branca. Se deixar no 50% a cor fica normal).
+          </p>
+        </small>
+      </article>
+      <strong><u>Exemplo maroto:</u></strong>
+      <h4 style="color: hsl(150, 32%, 60%)">Experimento</h4>
+      <p>
+      O codigo: &lt;h4 style="color: hsl(150, 32%, 60%)"&gt;Experimento&lt;/h4&gt;
+      </p>
+      <h4 style="color: hsl(322, 68%, 21%)">Outro Experimento</h4>
+      <p>
+      O codigo: &lt;h4 style="color: hsl(322, 68%, 21%)"&gt;Outro Experimento&lt;/h4&gt;
+      </p>
+    </section>
+    <h1>LIKE PARA A PARTE 2 &#128077;</h1>
+    <footer>
+      <p>
+      Existe um segundo arquivo .html que vai ensinar a fazer gradientes e degrades com cores em CSS, se quiser ir daqui direto pra la, clique aqui: <a rel="external" href="cor02.html" target="_blank">(__0__)</a>
+      </p>
+    </footer>
+  </body>
+</html>
