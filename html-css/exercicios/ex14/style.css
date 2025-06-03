@@ -1,0 +1,102 @@
+body{
+  background-image: linear-gradient(to bottom, #2552D9,  #2E6FF2, #94ABF2);
+  background-attachment: fixed;
+  color: #0D0D0D;
+}
+h2{
+  text-align: center;
+}
+h3{
+  margin-left: 20px;
+  color: #1800DC;
+}
+h4{
+  margin-left: 15px;
+  color: #8378F5;
+}
+.classudo{
+  border: 1.5px solid #78E4F5;
+  color: #5000F5;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.classudo::after{
+    content: "\01F9D0";
+  }
+  #especial{
+  font-size: 50px;
+  font-family: sans-serif;
+  margin-left: 30px;
+  color: #000564;
+}
+article{
+  padding: 0.5rem 1rem;
+  border: 2px solid; 
+  display: inline-block;
+}
+footer{
+  padding: 0.5rem 1rem;
+  border: 2px solid; 
+  display: inline-block;
+}
+.exemplo{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.exemplo-titulo{
+  font-size: 1.5rem;
+  border: 2px solid;
+  display: inline;
+}
+div{
+  width: 300px;
+  margin-top: 10px;
+}
+div:hover{
+  color: #BDA9EA;
+  background-color: grey;
+  width: 350px;
+}
+a:hover{
+  color: red;
+}
+a:visited{
+  color: magenta;
+}
+a:active{
+  color: darkred;
+}
+.rubik-storm-regular {
+  font-family: "Rubik Storm", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-storm-regular::before{
+  content: "\01F4AA";
+}
+.rubik-storm-regular::after{
+  content: "\01F3CB";
+}
+.exemplo-first-line{
+  text-align: center;
+}
+
+.exemplo-first-line::first-line{
+  text-decoration: underline;
+  background-color: #4EC0F2;
+}
+
+.grenze-gotisch{
+  font-family: "Grenze Gotisch", serif;
+  font-optical-sizing: auto;
+  font-weight: 250;
+  font-style: normal;
+}
+.grenze-gotisch::first-letter{
+  line-height: 1;
+  font-size: 4em;
+  float: left;
+  font-family: "Grenze Gotisch", serif;
+  padding-right: 5px;
+  font-weight: bold;
+}

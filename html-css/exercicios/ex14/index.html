@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>ID e CLASSES</h1>
+      <p>
+      Agora bora aprender um bagulho sinistro, que é atribuição de ID e CLASSES. <br>
+      Me parece um papo mais interessante... Pelo menos mais interessante que teoria das cores e fontes.
+      </p>
+    </header>
+    <section>
+      <h2>ID</h2>
+      <p>
+      O id é um indentificador de estilos especiais, que você define no CSS externo ou interno. Você cria esse estilo "especial", define um nome pra ele usando a "#", tipo assim: <code>#estilo-especial</code>, e esse nome se torna o identificador. Depois pra chamar no HTML é só usar: <code>id="estilo-especial".</code><br><br>
+      </p>
+      <h3>Esse aqui é um h3 com CSS definida padrão</h3>
+      <p class="exemplo">O código com CSS padrão de h3:</p>
+      <pre><code>
+h3{
+  margin-left: 20px;
+  color: #1800DC;
+}
+      </code></pre> 
+      <h3 id="especial">E esse aqui é um h3 com CSS especial e identificador :)</h3>
+      <p class="exemplo">O código do CSS com o identificador:</p>
+      <pre><code>  
+#especial{
+  font-size: 50px;
+  font-family: sans-serif;
+  margin-left: 30px;
+  color: #000564;
+}
+      </code></pre>
+      <p class="exemplo">Código do h3 com o id:</p>
+      <pre><code>
+        &lt;h3 id="especial"&gt;E esse aqui é um h3 com CSS especial e identificador :)&lt;/h3&gt;
+      </code></pre>
+    </section>
+    <article>
+      <p>
+      Rapais, fica esperto que você só pode usar um id por documento HTML... Então se já usei o <code>id="especial"</code> no h3 ali em cima, não posso usar esse mesmo <code>id="especial"</code> em outro h3, h1, h2, ou qualquer outra tag dos inferno que seja. Na real até pode, faça o que você quiser, siga seus sonhos, reaja a assaltos, mas é ERRADO. Nada me impede de criar outra id e botar em outro canto... Mas não vai socar id no HTML inteiro também né, meio sem noção.
+      </p>
+    </article>
+    <section>
+      <h2>Classes</h2>
+      <p>
+      Pra suprir essa "desvantagem" do id, existe as famosas classes.<br>
+      Uma classe é basicamente o mesmo conceito do id, tu vai definir na CSS qual estilo essa classe vai ter, depois tu soca classe onde você quer usar no HTML.<br>
+      Uma pequena diferença entre os dois é que o id você define o nome com "#" e a classe você define com um ".", e na hora de chamar a classe tu bota <code>class="exemplo"</code>
+      </p>
+      <h4>UM H4 SEM CLASSE</h4>
+      <p class="exemplo">Código de CSS do h4 sem o class:</p>
+      <pre><code>
+h4{
+  margin-left: 15px;
+  color: #8378F5;
+}
+      </code></pre>
+      <h4 class="classudo">UM H4 COM CLASS</h4>
+      <p class="exemplo">Código do class na CSS:</p>
+      <pre><code>
+.classudo{
+  border: 1.5px solid #78E4F5;
+  color: #5000F5;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.classudo::after{
+    content: "\01F9D0";
+}
+      </code></pre>
+      <p class="exemplo">Código do h4:</p>
+      <pre><code>
+      &lt;h4 class="classudo"&gt;UM H4 COM CLASS&lt;/h4&gt;
+      </code></pre>
+      <p>
+      Da pra botar duas classes ao mesmo tempo num mesmo bagulho e até mesmo misturar id com classes, mas como já usei o id lá em cima vou mostrar só duas classes juntas porque eu sou um bom moço e não faço coisas erradas...<br>
+      <span class="classudo exemplo">TIPO ESSE AQUI, TEM DUAS CLASSES.</span>
+      </p>
+      <span class="exemplo">O código fica assim:</span>
+      <pre><code>
+&lt;span class="classudo exemplo"&gt;TIPO ESSE AQUI, TEM DUAS CLASSES.&lt;/span&gt;
+      </code></pre>
+      <span class="exemplo">Código da classe exemplo é esse:</span>
+      <pre><code>
+.exemplo{
+  font-weight: bold;
+  text-decoration: underline;
+}
+      </code></pre>
+    </section>
+    <article>
+      <p>
+      Note que eu usei um emojizim ali pra dar uma diferenciada, pra isso tive que fazer a classe ter outra classe recebendo um elemento no final.
+      </p>
+    </article>
+    <h2>Pseudo-classes</h2>
+    <section>
+      <p>
+      Agora que você sabe o que é ID e o que é class, vamos falar de pseudo-classes e pseudo-elementos.<br>
+      Uma pseudo-classe tem que tá ligada a uma classe ou a um elemento da CSS, porque ela vai referenciar e mudar o que ela tiver que mudar daquela classe ou elemento. Normalmente o que a pseudo-classe faz é mudar o estado e estilizar uma CSS já feita, tipo quando passa o mouse por cima e acontece alguma coisa, clica num link e ele muda de cor depois que mudou, esse tipo de coisa. Pra nomear uma pseudo-classe você usa ":". Vamo mostrar uns exemplos como sempre.
+      </p>
+      <span class="exemplo-titulo">Pseudo-classe:hover</span><br>
+      <div>
+        Aqui temos uma tag &lt;div&gt; que vai receber os estilos de uma pseudo-classe chamada hover, que só aplica o estilo quando você passa o mouse em cima... ENTÃO ESCURREGUE O MOUSE AQUI.
+      </div><br>
+      <span class="exemplo">O código da div tá assim:</span>
+      <pre><code>
+div{
+  width: 300px;
+}
+      </code></pre>
+      <span class="exemplo">O código da CSS fica assim da div:hover:</span>
+      <pre><code>
+div:hover{
+  color: magenta;
+  background-color: grey;
+  width 200px;
+  margin-top: 10px;
+}
+      </code></pre>
+      <span class="exemplo-titulo">Pseudo-classe:visited e pseudo-classe:active</span><br>
+      <p>
+      Aqui vou te mostrar interação de pseudo-classes com links.<br>
+      Com a pseudo-classe visted o link abaixo vai aparecer de cor diferente quando você já tiver visitado o link antes, e com o estado active, vai mudar de cor depois que você clicar. Faça seus testes ai.
+      </p>
+      <a href="https://www.youtube.com/watch?v=16xGceArnz8" target="_blank">Clique aqui pra ver meu estado de espirito nesse momento</a><br>
+      <article>
+        Como você deve ter imaginado, pra usar essas duas pseudo-classes especificas pra links, no css tu vai atribuir elas na tag &lt;a&gt;.
+      </article>
+        <span class="exemplo">Código do link:</span>
+        <pre><code>
+&lt;a href="https://www.youtube.com/watch?v=16xGceArnz8" target="_blank"&gt;Clique aqui pra ver meu estado de espirito nesse momento&lt;/a&gt;
+        </code></pre>
+        <span class="exemplo">Código da CSS de &lt;a&gt;</span>
+        <pre><code>
+a:hover{
+  color: red;
+}
+a:visited{
+  color: magenta;
+}
+a:active{
+  color: darkred;
+}
+        </code></pre>
+    </section>
+    <section>
+      <p>
+      Tem também os pseudo-elementos, que inclusive você já viu aqui nesse documento, que é o tal do <code>.classudo::after</code> que eu usei pra botar um elemento no final de tudo que usar a classe classudo. Enquanto as pseudo-classes mexem no estado e a interação de um conteúdo, o pseudo elemento mexe no conteúdo em si, podendo acrescentar e modificar coisas da classe onde ele estiver referenciando.<br>
+      Vamo pra outros exemplos de pseudo-elemento...
+      </p> 
+      <span class="exemplo-titulo">::before & ::after</span><br><br>
+      <span class="rubik-storm-regular">AQUI É BODY BUILDER POR#@ BIIIRL</span><br><br>
+      <span class="exemplo">Código do &lt;span&gt;:</span>
+      <pre><code>
+&lt;span class="rubik-storm-regular"&gt;AQUI É BODY BUILDER POR#@ BIIIRL&lt;/span&gt;
+      </code></pre>
+      <span class="exemplo">Código da CSS (tive que importar fonte e tem link no head também):</span><br><br>
+      <pre><code>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+
+.rubik-storm-regular {
+  font-family: "Rubik Storm", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-storm-regular::before{
+  content: "\01F4AA";
+}
+.rubik-storm-regular::after{
+  content: "\01F3CB";
+}
+      </code></pre>
+      <span class="exemplo-titulo">::first-line</span><br><br>
+      <div class="exemplo-first-line">
+        Esse aqui faz o que o nome diz...<br>
+      ...Estiliza só a primeira linha.
+      </div>
+      <span class="exemplo">Código do &lt;div&gt;:</span>
+      <pre><code>
+&lt;div class="exemplo-first-line"&gt;
+  Esse aqui faz o que o nome diz...&lt;br&gt;
+  ...Estiliza só a primeira linha.
+&lt;/div&gt;
+      </code></pre>
+      <span class="exemplo-titulo">::first-letter</span><br><br>
+      <p class="grenze-gotisch">
+        Era uma vez, um pseudo-elemento que só estiliza a primeira letra do conteúdo.<br>
+        Esse pseudo-elemento não é muito usado, assim como os outros acima... Por isso eles são muito tristes e não viveram felizes para sempre. (caguei)
+      </p>
+      <span class="exemplo">Código do &lt;p&gt;:</span>
+      <pre><code>
+&lt;div class="grenze-gotisch"&gt;
+        Era uma vez, um pseudo-elemento que só estiliza a primeira letra do conteúdo.&lt;br&gt;
+        Esse pseudo-elemento não é muito usado, assim como os outros acima... Por isso eles são muito tristes e não viveram felizes para sempre. (caguei)
+      &lt;/div&gt;
+      </code></pre>
+      <span class="exemplo">Código da CSS (tambem tive que importar fonte, se liga):</span>
+      <pre><code>
+&lt;head&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+      </code></pre>
+    </section>
+      <h3>Resumão do que aprendemos:</h3>
+    <footer>
+      <ul>
+        <li>Como aplicar classes e IDs</li>
+        <li>Diferença entre pseudo-classe e pseudo-elemento</li>
+        <li>Como usar :hover e ::after</li>
+        <li>Que isso na real não foi tão interessante quanto parecia</li>
+      </ul>
+    </footer>
+  </body>
+</html>
