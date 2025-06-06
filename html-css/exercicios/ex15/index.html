@@ -25,6 +25,8 @@
        <dd>A bordinha que delimita o que é a caixa</dd>
        <dt>margin</dt>
        <dd>É o espaço externo, o que vai ficar como a parte de fora da caixa</dd>
+       <dt>outline-width</dt>
+       <dd>É uma linha que tem entre a margem e a borda</dd>
       </dl>
      <p>
      Existem dois tipos de caixas, a <strong><u>box-level</u></strong> e a <strong><u>inline-level</u></strong>
@@ -65,15 +67,187 @@
      </ul>
     </section>
     <footer>
-      Nesse conteúdo, eu fiz questão de colocar uma coisinha diferenciada na CSS que foi separar tudo em caixas, todas as tags estão separadas em caixas e ficam a vista quando passa o mouse em cima (uso do :hover), achei mó delicinha, foi uma sugestão que nosso amigo da vizinhança chat-gpto me deu e achei legal.<br>
-      Tome-le ai o código da CSS pra tu ver como foi feito:
+      Nesse conteúdo, eu fiz questão de colocar uma coisinha diferenciada na CSS que foi separar tudo em caixas, todas as tags estão separadas em caixas e ficam a vista e aparece um balãozinho com o nome de cada tag quando passa o mouse em cima (uso do :hover), achei mó delicinha, foi uma sugestão que nosso amigo da vizinhança chat-gpto me deu e achei legal.<br>
+      Tome-le ai o trambolho de código da CSS pra tu ver como foi feito:
       <pre><code>
 body *:hover:not(html):not(body){
   box-shadow: 0 1px 3px rgba(0, 0, 0.25);
   transform: translateY(-1px);
 }
+html, body, header, section, h1, p, strong, dl, dt, dd, ul, li, footer, pre, code{
+  position: relative;
+}
+html:hover::after{
+  content: "html"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+body:hover::after{
+  content: "body"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+header:hover::after{
+  content: "header"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+section:hover::after{
+  content: "section"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+h1:hover::after{
+  content: "h1"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+p:hover::after{
+  content: "p"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+strong:hover::after{
+  content: "strong";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+dl:hover::after{
+  content: "dl"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+dt:hover::after{
+  content: "dt"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+dd:hover::after{
+  content: "dd"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+
+}
+ul:hover::after{
+  content: "ul";  
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+li:hover::after{
+  content: "li";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+
+}
+footer:hover::after{
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+  content: "footer"
+}
+pre:hover::after{
+  content: "pre";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+code:hover::after{
+  content: "code";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
       </code></pre>
-      O "*" serve como um "selecionar tudo", e os :not() são as exceções do "*selecionar tudo".
     </footer>
+    <article>
+      O "*" serve como um "selecionar tudo", e os :not() são as exceções do "*selecionar tudo", e <code>z-index: 999;</code> é a camada de profundidade da página, pode chamar de eixo z também, e ele só pode ser usado se deixar <code>position: static;</code>, que nem eu defini no inicio com aquele monte de tag. (Só lembrando que isso é totalmente disfuncional e só tá assim porque ainda não sei mexer no famoso Java Script, então nunca deve ser usado e feito dessa forma em um contexto profissional).
+    </article>
   </body>
 </html>

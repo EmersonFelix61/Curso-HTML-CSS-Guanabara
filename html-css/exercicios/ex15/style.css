@@ -14,6 +14,7 @@ footer{
   padding: 0.5rem 1rem;
   border: 2px solid; 
   display: inline-block;
+  transform: translateY(15px);
 }
 .exemplo{
   text-decoration: underline;
@@ -21,9 +22,11 @@ footer{
   background-color: #ffff99;
 }
 dl{
-  padding: 20px;
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.495);
   font-family: "Georgia", serif;
-  margin-top: -20px;
+  padding: 2px;
+  margin-top: 3px;
+  border-radius: 12px;
 }
 dt{
   font-weight: bold;
@@ -34,4 +37,185 @@ dd{
   margin-left: 20px;
   color: silver; 
   font-style: italic;
+}
+html, body, header, section, h1, p, strong, dl, dt, dd, ul, li, footer, pre, code, article{
+  position: relative;
+}
+html:hover::after{
+  content: "<html>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+body:hover::after{
+  content: "<body>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+header:hover::after{
+  content: "<header>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+section:hover::after{
+  content: "<section>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+h1:hover::after{
+  content: "<h1>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+p:hover::after{
+  content: "<p>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+strong:hover::after{
+  content: "<strong>";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+dl:hover::after{
+  content: "<dl>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+dt:hover::after{
+  content: "<dt>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+dd:hover::after{
+  content: "<dd>"; 
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+
+}
+ul:hover::after{
+  content: "<ul>";  
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+li:hover::after{
+  content: "<li>";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+
+}
+footer:hover::after{
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+  content: "<footer>"
+}
+pre:hover::after{
+  content: "<pre>";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+code:hover::after{
+  content: "<code>";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
+}
+article:hover::after{
+  content: "<article>";
+  background: black;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  top: -20px;
+  left: 0;
+  z-index: 999;
 }
